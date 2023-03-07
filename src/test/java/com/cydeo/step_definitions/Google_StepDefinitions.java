@@ -49,13 +49,17 @@ public class Google_StepDefinitions {
 
 
     }
-
-
-    @Then("User should see {string} in the result")
-    public void userShouldSeeInTheResult(String expectedCapital) {
-        String actualValue = googleSearchPage.getCapital();
-        Assert.assertEquals(expectedCapital, actualValue);
+    @When("user types capital of {string} and clicks enter")
+    public void user_types_capital_of_and_clicks_enter( String country) {
+        googleSearchPage.searchBox.sendKeys("capital of "+country+ Keys.ENTER);
     }
+    @Then("User should see {string} in the result")
+    public void user_should_see_in_the_result(String expectedCapital) {
+        String actualValue = googleSearchPage.getCapital();
+        Assert.assertEquals(expectedCapital,actualValue);
+    }
+
+
 
 
 }

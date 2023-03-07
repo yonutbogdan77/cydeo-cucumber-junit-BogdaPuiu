@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
                      // if dryRun = true--> do not run my step_definitions , but
                      // only check if any step is missing snippet
                      // if dryRun = false--> is going to run the whole program
-        tags = ""// we have: - "or" option--> have to match at least one scenario name
+        tags = "@smoke"// we have: - "or" option--> have to match at least one scenario name
                        //          - "and" option--> have to match both scenarios names
                        //          - "and not" option--> will exclude one of the scenario
      // publish = true
