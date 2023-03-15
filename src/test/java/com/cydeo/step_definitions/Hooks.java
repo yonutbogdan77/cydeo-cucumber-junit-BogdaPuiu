@@ -12,12 +12,12 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
     // import from io.cucumber.java
-    //@Before(order = 1)
+    @Before()
     public void setupScenario() {
         System.out.println("===Setting up browser using cucumber @Before===");
     }
 
-    //@Before(value = "@Login", order = 2)
+    @Before(value = "@Login", order = 2)
     public void setupScenarioForLogins() {
         System.out.println("===this will apply only to scenarios with @Login tag===");
     }
